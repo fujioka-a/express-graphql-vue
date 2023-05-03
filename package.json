@@ -1,0 +1,26 @@
+{
+  "name": "express-graphql-vue",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "example project based on project title",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fujioka-a/express-graphql-vue.git"
+  },
+  "author": "fujioka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fujioka-a/express-graphql-vue/issues"
+  },
+  "homepage": "https://github.com/fujioka-a/express-graphql-vue#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "graphql-http": "^1.18.0",
+    "nodemon": "^2.0.22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "njpwerner.autodocstring",
+    "hbenl.vscode-test-explorer",
+    "streetsidesoftware.code-spell-checker",
+    "esbenp.prettier-vscode",
+    "raymondcamden.csslint",
+    "dbaeumer.vscode-eslint",
+    "Orta.vscode-jest"
+  ]
+}

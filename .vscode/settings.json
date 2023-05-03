@@ -1,0 +1,11 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrapColumn": 120,
+  "git.ignoreLimitWarning": true
+}
