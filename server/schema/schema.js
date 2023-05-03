@@ -1,5 +1,5 @@
-import { buildSchema, GraphQLID, GraphQLInputObjectType, GraphQLObjectType, GraphQLString } from 'graphql';
-
+import { buildSchema, GraphQLID, GraphQLInputObjectType, GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
+import Movie from '../models/movie.js'
 
 const MovieType = new GraphQLObjectType({
   name: 'Movie',
@@ -11,19 +11,22 @@ const MovieType = new GraphQLObjectType({
     genre: {type: GraphQLString}
   })
 })
-const RootQuery = new GraphQLInputObjectType({
-  name: 'RootQuerytype',
+const RootQuery = new GraphQLObjectType({
+  name: 'RootQueryType',
   fields: {
-    type: MovieType,
-    args: { id: { type: GraphQLID } },
-    resolve(parents, args) {
-
+    movie: {
+      type: MovieType,
+      args: { id: { type: GraphQLID } },
+      resolve(parent, args) {
+        return Movie.findById(args.id)
+      }
     }
   }
 })
 
-const schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`);
+// module.export = new GraphQLSchema({
+//   query: RootQuery
+// })
+export default new GraphQLSchema({
+  query: RootQuery,
+});

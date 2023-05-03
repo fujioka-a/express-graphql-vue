@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fujioka-a/express-graphql-vue#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "graphql": "^16.6.0",
     "graphql-http": "^1.18.0",

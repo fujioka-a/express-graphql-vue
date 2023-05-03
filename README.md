@@ -5,4 +5,7 @@ Udemyサイトを参考に各種パッケージをアップグレードして、
 - graphql-httpを使用した （express-graphqlがno longer maintainedのため）  
 - nodemonはnpm serveでOKだが、更新のたびに再起動しないためにnodemonを利用する  
 > npx nodemon app   
+  
+- env読み込みはファイル先頭で実施すること  
 
+- MongoDBはデフォルトで初期Connectを作成した際にIPアドレスを登録して、IP制限をオートで行う。そのため、IPアドレスが変更すると、アクセスがブロックされてしまう。  
