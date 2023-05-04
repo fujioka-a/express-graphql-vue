@@ -1,10 +1,12 @@
-import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import * as dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express';
 import { createHandler } from 'graphql-http/lib/use/express';
-import { buildSchema } from 'graphql';
+import { GraphiQL } from 'graphiql';
 import mongoose from 'mongoose';
+
+// import 'graphiql/graphiql.css';
 
 import query from './server/schema/schema.js';
 const schema = query
