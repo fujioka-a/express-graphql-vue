@@ -26,6 +26,7 @@
     "nodemon": "^2.0.22"
   },
   "devDependencies": {
+    "@vue/cli": "^5.0.8",
     "graphiql": "^2.4.2"
   }
 }

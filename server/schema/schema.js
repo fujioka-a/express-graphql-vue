@@ -50,7 +50,19 @@ const RootQuery = new GraphQLObjectType({
       resolve(parent, args) {
         return Director.findById(args.id)
       }
-    }
+    },
+    movies: {
+      type: new GraphQLList(MovieType),
+      resolve(parent, args) {
+        return Movie.find({})
+      }
+    },
+    directors: {
+      type: new GraphQLList(DirectorType),
+      resolve(parent, args) {
+        return Director.find({})
+      }
+    },
   }
 })
 const Mutation = new GraphQLObjectType({
