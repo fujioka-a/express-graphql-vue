@@ -3,6 +3,7 @@ Udemyサイトを参考に各種パッケージをアップグレードして、
 
 ## セットアップ  
 - graphql-httpを使用した （express-graphqlがno longer maintainedのため）  
+  →GraphiQLを使用できないことから、GraphQLのバージョンを下げてexpressーgraphqlを利用するように変更  
 - nodemonはnpm serveでOKだが、更新のたびに再起動しないためにnodemonを利用する  
 > npx nodemon app   
   

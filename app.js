@@ -2,8 +2,7 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express';
-import { createHandler } from 'graphql-http/lib/use/express';
-import { GraphiQL } from 'graphiql';
+import { graphqlHTTP } from 'express-graphql';
 import mongoose from 'mongoose';
 
 // import 'graphiql/graphiql.css';
@@ -19,7 +18,7 @@ mongoose.connection.once('open', () => {
 const app = express();
 
 // make middleware
-app.all('/graphql', createHandler({
+app.use('/graphql', graphqlHTTP({
   schema,
   graphiql: true
 }));
