@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <MainHeader />
+    <b-container>
+    <b-row>
+      <b-col md="4"><SideNav /></b-col>
+      <b-col md="8"><MovieList /></b-col>
+    </b-row>
+</b-container>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainHeader from "@/components/MainHeader"
+import SideNav from "@/components/SideNav"
+import MovieList from "@/components/MovieList"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainHeader,
+    SideNav,
+    MovieList
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
